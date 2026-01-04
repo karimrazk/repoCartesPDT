@@ -1,0 +1,54 @@
+<div class="container-fluid ">
+  <div class=" py-2  ">
+    <div class="row">
+      <!-- INFO -->
+      <div class="col-12 mb-1">
+        <div class="card borderstylecolor">
+          <div class="card-header headercard">
+            <h6 class="mb-0" *ngIf="selected">
+              Informations de la {{ selected.type }}
+            </h6>
+          </div>
+
+          <div class="card-body">
+            <ng-container *ngIf="selected; else empty">
+
+              <p *ngIf="selected.nomFr"><b>Commune :</b> {{ selected.nomFr }}</p>
+              <a *ngIf="selected.type == 'Commune'" class="btn btn-outline-danger btn-sm"
+                [routerLink]=" ['/communes', selected.nomFr]" routerlinkactive="router-link-active">
+                Voir Détails
+              </a>
+
+
+            </ng-container>
+
+            <ng-template #empty>
+              <p>
+                Cette section affiche des informations détaillées sur la province sélectionnée
+                dans la carte interactive.
+              </p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+
+      <!-- MAP -->
+      <div class="col-12">
+        <div class="card borderstylecolor">
+          <div class="card-header headercard">
+            <h6 class="mb-0">Carte Interactive des Provinces</h6>
+          </div>
+
+          <div class="card-body">
+            <iframe [src]="mapUrl" width="100%" height="450" class="border border-1 borderstylecolor">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

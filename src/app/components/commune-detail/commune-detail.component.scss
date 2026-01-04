@@ -1,0 +1,119 @@
+.borderstylecolor {
+  border-color: #0f2a44 !important;
+}
+.headercard {
+  background-color: #0f2a44;
+  color: #ffffff;
+}
+
+/* ============================= */
+/* TABS SECTEURS */
+/* ============================= */
+
+#sectorTabs {
+  background: #f4f6f9;
+  border-radius: 10px, 10px, 0px, 0px;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+#sectorTabs .nav-link {
+  border-radius: 6px 6px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f2a44;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+#sectorTabs .nav-link:hover {
+  background-color: rgba(15, 42, 68, 0.08);
+}
+
+/* Onglet actif */
+#sectorTabs .nav-link.active {
+  background-color: #0f6efd; /* Bootstrap primary */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 111, 253, 0.3);
+}
+
+/* Contenu */
+.tab-content {
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  min-height: 160px;
+}
+
+/* Titres */
+.tab-pane h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0f2a44;
+}
+
+/* Listes */
+.tab-pane ul {
+  padding-left: 18px;
+}
+
+.tab-pane li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  #sectorTabs .nav-link {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .tab-content {
+    padding: 12px;
+  }
+}
+
+/* ============================= */
+/* COULEURS PAR SECTEUR */
+/* ============================= */
+
+/* EMPLOI – vert */
+#sectorTabs .nav-link.emploi.active {
+  background-color: #198754;
+  box-shadow: 0 4px 10px rgba(25, 135, 84, 0.35);
+  color: #fff;
+}
+
+/* EDUCATION – bleu */
+#sectorTabs .nav-link.education.active {
+  background-color: #0d6efd;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.35);
+  color: #fff;
+}
+
+/* SANTE – rouge */
+#sectorTabs .nav-link.sante.active {
+  background-color: #dc3545;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.35);
+  color: #fff;
+}
+
+/* EAU – cyan */
+#sectorTabs .nav-link.eau.active {
+  background-color: #0dcaf0;
+  box-shadow: 0 4px 10px rgba(13, 202, 240, 0.35);
+  color: #003c46;
+}
+/* MANU –  */
+#sectorTabs .nav-link.manu.active {
+  background-color: #b6a705;
+  box-shadow: 0 4px 10px rgba(240, 191, 13, 0.35);
+  color: #000000;
+}
+
+/* Hover (optionnel) */
+#sectorTabs .nav-link:not(.active):hover {
+  background-color: rgba(15, 42, 68, 0.08);
+}

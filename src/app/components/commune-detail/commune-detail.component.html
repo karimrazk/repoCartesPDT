@@ -1,0 +1,144 @@
+<div class="container  ">
+  <div class=" py-4  ">
+    <div class="row">
+      <div class="col-12">
+
+        <!-- NAV TABS -->
+        <ul class="nav nav-pills nav-fill" id="sectorTabs" role="tablist">
+
+          <li class="nav-item">
+            <button class="nav-link emploi " data-bs-toggle="tab" data-bs-target="#emploi" type="button"
+              (click)="setActiveTab('emploi')">
+              EMPLOI
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link education active" data-bs-toggle="tab" data-bs-target="#education" type="button"
+              (click)="setActiveTab('education')">
+              ÉDUCATION
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link sante" data-bs-toggle="tab" data-bs-target="#sante" type="button"
+              (click)="setActiveTab('sante')">
+              SANTÉ
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link eau" data-bs-toggle="tab" data-bs-target="#eau" type="button"
+              (click)="setActiveTab('eau')">
+              EAU
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link manu" data-bs-toggle="tab" data-bs-target="#manu" type="button"
+              (click)="setActiveTab('manu')">
+              MANU
+            </button>
+          </li>
+        </ul>
+
+
+        <!-- TAB CONTENT -->
+        <div class="tab-content p-3 border rounded-bottom">
+
+          <!-- EMPLOI -->
+          <div class="tab-pane fade" id="emploi" role="tabpanel">
+            <div class="row">
+              <div class="col-6">
+                <h6>Indicateurs de l’emploi</h6>
+                <ul>
+                  <li>Taux d’emploi</li>
+                  <li>Taux de chômage</li>
+                  <li>Secteurs dominants</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <div class="card borderstylecolor">
+                  <div class="card-header headercard">
+                    <h6 class="mb-0">Carte Interactive des Provinces</h6>
+                  </div>
+                  <div class="card-body">
+                    <iframe [src]="mapUrl" width="100%" height="500" class="border border-1">
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- EDUCATION -->
+          <div class="tab-pane fade show active" id="education" role="tabpanel">
+            <h6>Indicateurs de l’éducation</h6>
+            <ul>
+              <li>Écoles primaires</li>
+              <li>Collèges</li>
+              <li>Lycées</li>
+              <li>Taux de scolarisation</li>
+            </ul>
+          </div>
+
+          <!-- SANTE -->
+          <div class="tab-pane fade" id="sante" role="tabpanel">
+            <h6>Indicateurs de la santé</h6>
+            <ul>
+              <li>Centres de santé</li>
+              <li>Hôpitaux</li>
+              <li>Médecins</li>
+            </ul>
+          </div>
+
+          <!-- EAU -->
+          <div class="tab-pane fade" id="eau" role="tabpanel">
+            <h6>Eau & assainissement</h6>
+            <ul>
+              <li>Accès à l’eau potable</li>
+              <li>Réseau d’assainissement</li>
+              <li>Stations de traitement</li>
+            </ul>
+          </div>
+
+          <!-- MANU -->
+          <div class="tab-pane fade" id="manu" role="tabpanel">
+            <h6>Indicateurs de la MAN</h6>
+            <ul>
+              <li>manu</li>
+              <li>manu</li>
+              <li>manu</li>
+              <li>manu</li>
+            </ul>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <br>
+    {{activeTab }}<br>
+    {{ provinceData | json }}<br>
+    <div class="row">
+
+      <!-- MAP
+      <div class="col-12">
+        <div class="card borderstylecolor">
+          <div class="card-header headercard">
+            <h6 class="mb-0">Carte Interactive des Provinces</h6>
+          </div>
+
+          <div class="card-body">
+            <iframe [src]="mapUrl" width="100%" height="500" class="border border-1">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      -->
+    </div>
+
+  </div>
+</div>

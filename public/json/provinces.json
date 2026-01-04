@@ -1,0 +1,8 @@
+{
+  "guelmim": {
+    "emploi": { "tauxEmploi": 45 },
+    "education": { "ecoles": 120 },
+    "sante": { "centres": 22 },
+    "eau": { "acces": 82 }
+  }
+}

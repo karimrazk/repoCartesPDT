@@ -1,0 +1,96 @@
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Sidebar */
+.gov-sidebar {
+  width: 270px;
+  min-height: 100vh;
+  background-color: #0f2a44;
+  color: #ffffff;
+}
+
+/* Header */
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Navigation */
+.gov-sidebar .nav-link {
+  color: #dbe6f1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.gov-sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Active */
+.gov-sidebar .nav-link.active {
+  background-color: #1c4e80;
+  color: #ffffff;
+}
+
+/* Section title */
+.nav-title {
+  margin: 18px 0 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #9fb7d1;
+}
+
+/* Content */
+main {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin: 15px;
+}
+
+.info-panel {
+  z-index: 999;
+  /*display: none; /* caché par défaut */
+}
+
+.info-panel h5 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.headercard {
+  background-color: #0f2a44;
+  color: #ffffff;
+}
+/* ============================= */
+/* LAYOUT RESPONSIVE CONTENU */
+/* ============================= */
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Desktop : espace pour sidebar */
+@media (min-width: 992px) {
+  .page-wrapper {
+    margin-left: 270px; /* largeur sidebar */
+    padding: 15px;
+  }
+}
+
+/* Mobile : pleine largeur */
+@media (max-width: 991px) {
+  .page-wrapper {
+    margin-left: 0;
+    padding: 12px;
+  }
+}
